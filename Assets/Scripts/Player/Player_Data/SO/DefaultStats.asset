@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0683505040d2ea14d92719aeec4aef83, type: 3}
+  m_Name: DefaultStats
+  m_EditorClassIdentifier: 
+  priority: 0
+  isMultiplier: 0
+  newMaxSpeed: 100
+  newFriction: 1
+  newAcceleration: 50
+  newRotationSpeed: 5
+  newMaxHealth: 0
+  newHealthRegen: 0
+  newHealthRegenCD: 0
+  newHealthConsumption: 0
+  newMaxSHield: 0
+  newShieldRegen: 0
+  newShieldRegenCD: 0
+  newShieldConsumption: 0
+  newDamageNegation: 0
+  newDamageReduction: 0
+  newDamage: 0
+  newAttSpeed: 0
+  newMultishot: 0
+  newDuration: 0
+  newCritChance: 0
+  newCritDamage: 0
+  newProjectileSpeed: 0
+  newAreaOfEffect: 0
+  NewXpBonus: 0
+  NewXpMultiplier: 0
+  NewCoinBonus: 0
+  NewCoinMultiplier: 0
+  newSpawnSpeed: 0
+  newSpawnStrenght: 0
