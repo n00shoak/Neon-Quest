@@ -2,15 +2,7 @@ using UnityEngine;
 
 public class Player_Actions_Attacks : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    // SpreadShooting
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
