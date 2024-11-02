@@ -24,7 +24,7 @@ public class Player_Acions_DefaultMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && rb.linearVelocity.magnitude < data.currentStats.maxSpeed)
+        if (Input.GetKey(KeyCode.Mouse1) && rb.linearVelocity.magnitude < data.currentStats.maxSpeed)
         {
             rb.AddForce(transform.right * data.currentStats.acceleration);
         }

@@ -13,10 +13,13 @@ public class Player_Data_Abillity : MonoBehaviour
 
     public void Action_attack(InputAction.CallbackContext context)
     {
-        for (int i = 0; i < attack.Length; i++)
+        if(context.started)
         {
-            attack[i].Invoke();
-        } 
+            for (int i = 0; i < attack.Length; i++)
+            {
+                attack[i].Invoke();
+            }
+        }
     }
 
     public void Action_SpellCast(InputAction.CallbackContext context)

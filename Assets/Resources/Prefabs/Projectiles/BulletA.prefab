@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2805573058013704028}
   - component: {fileID: -1034918190708012684}
   - component: {fileID: -6156050472034362914}
-  m_Layer: 0
+  - component: {fileID: -7156935733000951977}
+  m_Layer: 6
   m_Name: BulletA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,6 +74,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041f8872909e7734b92ae76c2b03f879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7156935733000951977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032260298835985502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd5c74817a312a4c92ba3029b7aeced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0
 --- !u!1001 &6487418594807444365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,9 +151,17 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b5ad178c55ace444387d7d42767a19ec, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fdefc5d5b8736cb4bb3f6b2c2bbf20a9, type: 2}
     - target: {fileID: 919132149155446097, guid: b5ad178c55ace444387d7d42767a19ec, type: 3}
       propertyPath: m_Name
       value: DefaultProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5ad178c55ace444387d7d42767a19ec, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
