@@ -34,7 +34,7 @@ MonoBehaviour:
   newDuration: 0
   newCritChance: 0
   newCritDamage: 0
-  newProjectileSpeed: 2
+  newProjectileSpeed: 1
   newAreaOfEffect: 0
   NewXpBonus: 0
   NewXpMultiplier: 0

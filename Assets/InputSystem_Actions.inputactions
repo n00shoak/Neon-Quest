@@ -305,6 +305,28 @@
                 },
                 {
                     "name": "",
+                    "id": "1f7c40bd-043c-47e2-aa8a-51241767e974",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpellA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c2e61ba6-c7cc-4d3a-9311-c1d0a227b2a3",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpellA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e16c371c-8363-4e5f-8e7c-f1831def5b0d",
                     "path": "",
                     "interactions": "",
@@ -316,8 +338,30 @@
                 },
                 {
                     "name": "",
+                    "id": "712008b5-9319-407c-9adc-79c57b1518cf",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpellB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "61a97d48-4529-4f48-a1c9-679cdb20c80b",
                     "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpellC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "207cdead-af04-4928-98af-d98e208df2b1",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

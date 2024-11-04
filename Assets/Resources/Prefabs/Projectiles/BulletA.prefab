@@ -87,6 +87,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 0
+  updateBullet:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6487418594807444365
 PrefabInstance:
   m_ObjectHideFlags: 0
