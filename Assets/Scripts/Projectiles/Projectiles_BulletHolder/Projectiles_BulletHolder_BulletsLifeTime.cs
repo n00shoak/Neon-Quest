@@ -28,6 +28,7 @@ public class Projectiles_BulletHolder_BulletsLifeTime : MonoBehaviour
                 }
 
                 everyCurrentLifeTime[i].lifeTime -= timeSpeed;
+                everyCurrentLifeTime[i].updateBullet.Invoke();
                 if (everyCurrentLifeTime[i].lifeTime <= 0)
                 {
                     Destroy(everyCurrentLifeTime[i].gameObject);

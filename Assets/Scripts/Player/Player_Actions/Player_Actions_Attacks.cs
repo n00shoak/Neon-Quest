@@ -19,23 +19,54 @@ public class Player_Actions_Attacks : MonoBehaviour
     // SpreadShooting
     public void ShootBulletA()
     {
-        GameObject bullet = GM_Singleton.Instance.Prefabs.projectiles[0];
+        GameObject bulletPrefab = GM_Singleton.Instance.Prefabs.projectiles[0];
+        int totalShots = Mathf.RoundToInt(3 + stats.multishot);
+        float spreadAngle = 30f;  // Adjust as needed or dynamically with stats.multishot
 
-        for (int i = 0;i < 1 + stats.multishot + 2;i++)
+        for (int i = 0; i < totalShots; i++)
         {
-            GameObject instance = Instantiate(bullet);
-            instance.transform.parent = bulletHolder.transform;
-            instance.transform.localScale = Vector3.one * (1 + stats.areaOfEffect);
-            instance.transform.position = transform.position;
-            instance.transform.eulerAngles = 
-                transform.eulerAngles + 
-                (Vector3.forward * (10 * i) - Vector3.forward * (1 + stats.multishot)/2) + 
-                Vector3.forward * -90;
+            GameObject bulletInstance = Instantiate(bulletPrefab);
+            bulletInstance.transform.parent = bulletHolder.transform;
+            bulletInstance.transform.localScale = Vector3.one * (1 + stats.areaOfEffect);
 
-            bulletHolder.GetComponent<Projectiles_BulletHolder_BulletsLifeTime>().everyLifeTime.Add(instance.GetComponent<Projectiles_General_LifeTime>());
+            // Set the bullet position in an arc
+            bulletInstance.transform.position = GetPositionOnCircle(
+                transform.position, 4 , spreadAngle, totalShots, i
+            );
 
-            Projectiles_BulletA_Actions_Propulsion bulletPropeller = instance.GetComponent<Projectiles_BulletA_Actions_Propulsion>();
-            bulletPropeller.SetStats(30 + stats.projectileSpeed + (rb.linearVelocity.normalized).magnitude,0, 0.5f + stats.duration);
+            // Calculate and set rotation for the bullet
+            float angleOffset = (10 * i - (1 + stats.multishot) * 5);
+            bulletInstance.transform.eulerAngles = transform.eulerAngles + Vector3.forward * angleOffset - Vector3.forward * 90;
+
+            // Add bullet to tracking for lifetime management
+            bulletHolder.GetComponent<Projectiles_BulletHolder_BulletsLifeTime>().everyLifeTime.Add(
+                bulletInstance.GetComponent<Projectiles_General_LifeTime>()
+            );
+
+            // Set bullet propulsion stats
+            Projectiles_BulletA_Actions_Propulsion bulletPropeller = bulletInstance.GetComponent<Projectiles_BulletA_Actions_Propulsion>();
+            bulletPropeller.SetStats(
+                rb.linearVelocity,
+                30 + stats.projectileSpeed,
+                0,
+                0.5f + stats.duration
+            );
         }
+    }
+
+    public Vector3 GetPositionOnCircle(Vector3 center, float diameter, float angle, int totalPoints, int currentPointIndex)
+    {
+        float radius = diameter / 2f;
+        float angleStep = angle / (totalPoints - 1);
+        float currentAngle = -angle / 2 + currentPointIndex * angleStep;
+        float radianAngle = currentAngle * Mathf.Deg2Rad;
+
+        // Calculate the position on the circle before applying rotation
+        Vector3 localPosition = new Vector3(Mathf.Cos(radianAngle), Mathf.Sin(radianAngle), 0) * radius;
+
+        // Apply the object's rotation to align the circle with the object's orientation
+        Vector3 rotatedPosition = center + transform.rotation * localPosition;
+
+        return rotatedPosition;
     }
 }

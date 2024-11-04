@@ -29,12 +29,12 @@ MonoBehaviour:
   newDamageNegation: 0
   newDamageReduction: 0
   newDamage: 0
-  newAttSpeed: 0
-  newMultishot: 0
+  newAttSpeed: 0.2
+  newMultishot: 3
   newDuration: 0
   newCritChance: 0
   newCritDamage: 0
-  newProjectileSpeed: 0
+  newProjectileSpeed: 2
   newAreaOfEffect: 0
   NewXpBonus: 0
   NewXpMultiplier: 0
